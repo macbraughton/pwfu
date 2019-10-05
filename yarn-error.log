@@ -1,0 +1,40 @@
+Arguments: 
+  /Users/glucose/.nvm/versions/node/v10.0.0/bin/node /usr/local/Cellar/yarn/1.19.0/libexec/bin/yarn.js start
+
+PATH: 
+  /Users/glucose/.nvm/versions/node/v10.0.0/bin:/Users/glucose/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
+
+Yarn version: 
+  1.19.0
+
+Node version: 
+  10.0.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/glucose/projects/crypto/package.json: Unexpected token } in JSON at position 91
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.19.0/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.19.0/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.19.0/libexec/lib/cli.js:315:13
+      at run (/usr/local/Cellar/yarn/1.19.0/libexec/lib/cli.js:105496:22)
+      at /usr/local/Cellar/yarn/1.19.0/libexec/lib/cli.js:105513:30
+      at flush (/usr/local/Cellar/yarn/1.19.0/libexec/lib/cli.js:104997:9)
+      at process._tickCallback (internal/process/next_tick.js:172:11)
+
+npm manifest: 
+  {
+    "name": "crypto-play",
+    "version": "0.0.1",
+    "main": "index.js",
+    "license": "MIT",
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

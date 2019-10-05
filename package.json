@@ -1,0 +1,13 @@
+{
+  "name": "password-juju",
+  "version": "0.0.1",
+  "main": "crypto.js",
+  "author": "dw@1hx.ca",
+  "license": "MIT",
+  "dependencies": {
+    "command-line-args": "^5.1.1"
+  },
+  "bin": {
+    "password": "./crypto.js"
+  }
+}
