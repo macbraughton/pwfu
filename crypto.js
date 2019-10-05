@@ -9,7 +9,7 @@ const optionDefinitions = [
   { name: 'hasher', alias: 'h', type: String },
   { name: 'encoding', alias: 'e', type: String },
   { name: 'src', type: String, multiple: true, defaultOption: true },
-  { name: 'hashes', type: Boolean }
+  { name: 'hashes', alias: 'l', type: Boolean }
   //{ name: 'timeout', alias: 't', type: Number }
 ]
 
