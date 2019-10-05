@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-
 const commandLineArgs = require('command-line-args')
 const crypto = require("crypto")
+const secret = require("./secret")
 
 const optionDefinitions = [
   { name: 'verbose', alias: 'v', type: Boolean },
@@ -14,9 +14,6 @@ const optionDefinitions = [
 ]
 
 const options = commandLineArgs(optionDefinitions)
-
-const secret =
-  `I didn't think we had any secrets here. I mean, we're all adults, right?`
 
 options.src = options.src 
   ? options.src.join("") 
