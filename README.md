@@ -27,7 +27,7 @@ The *seed* is used to generate deterministic passwords.
 
 The *secret* is just something you store locally that helps the program to generate hashes that are unique. This is called salting.
 
-The *seed* is optional, but helps if you want to a more complex password from a simple phrase. 
+The *seed* is optional, but you can use if you want to create a *deterministic hash*.
 
 ## Usage
 
@@ -42,7 +42,7 @@ Mmmm... what a salty string.
 # Just give me a random password!
 > pwfu
 p3eneRZgoesyhZgOLqsSX5VyM9lpWd
-
+```
 ## Deterministic passwords
 
 This can be useful if you want to create a complex password from a unique secret and seed.
@@ -75,3 +75,7 @@ O3bckFxvM9Jcl8tR2qWlJt2DXwqvk7
 > pwfu -a "RSA-MD5" -e "hex" "sharks!"
 1f311ac92b1f11150ccae3b5bc0d04
 ```
+
+## License
+
+MIT
