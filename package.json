@@ -5,7 +5,8 @@
   "author": "dw@1hx.ca",
   "license": "MIT",
   "dependencies": {
-    "command-line-args": "^5.1.1"
+    "command-line-args": "^5.1.1",
+    "dotenv": "^8.1.0"
   },
   "bin": {
     "password": "./crypto.js"

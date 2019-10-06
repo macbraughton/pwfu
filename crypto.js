@@ -1,8 +1,8 @@
 #!/usr/bin/env node
+require('dotenv').config()
 const commandLineArgs = require('command-line-args')
 const crypto = require("crypto")
-const secret = require("./secret")
-
+const secret = process.env.SECRET
 const optionDefinitions = [
   { name: 'verbose', alias: 'v', type: Boolean },
   { name: 'random', alias: 'r', type: Boolean },
