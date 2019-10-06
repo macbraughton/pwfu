@@ -63,8 +63,3 @@ O3bckFxvM9Jcl8tR2qWlJt2DXwqvk7
 > pwfu -a "RSA-MD5" -e "hex" "sharks!"
 1f311ac92b1f11150ccae3b5bc0d04
 ```
-
-### TODO
-
-- Maybe we'll turn this into a nice little npm package.
-- Check for .env file first when it runs and ask for a secret if it doesn't have one
