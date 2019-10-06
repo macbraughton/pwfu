@@ -1,6 +1,6 @@
 {
   "name": "pwfu",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "lib/crypto.js",
   "author": "dw@1hx.ca",
   "license": "MIT",
