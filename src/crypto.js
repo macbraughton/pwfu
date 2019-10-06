@@ -4,6 +4,9 @@ dotenv.config()
 import commandLineArgs from 'command-line-args'
 import commandLineUsage from 'command-line-usage'
 import crypto from 'crypto'
+import readline from 'readline'
+import fs from 'fs'
+
 const secret = process.env.SECRET
 
 const optionDefinitions = [
@@ -15,8 +18,20 @@ const optionDefinitions = [
 ]
 
 const options = commandLineArgs(optionDefinitions)
-
-if (options.hashes) {
+if (!process.env.SECRET) {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+  
+  rl.question("Tell me a secret so I can salt your passwords:\n", 
+    secret => {
+      fs.writeFileSync('.env', `SECRET=${secret}`)
+      console.log("Mmmm... That's a salty string.");
+      rl.close()
+  })
+}
+else if (options.hashes) {
   const formatHashes = hashes => {
     let heading = "Available Hashing Algorithms:\n\t"
     let formattedHashes = hashes.join("\n\t")
