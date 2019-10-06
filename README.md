@@ -56,14 +56,6 @@ password -a "RSA-MD5" -e "hex" "sharks!"
 > 1f311ac92b1f11150ccae3b5bc0d04
 ```
 
-## Options
-
-  --src string             Seed for hashing algorithm             
-  -a, --algorithm string   Hashing algorithm (default: whirlpool) 
-  -e, --encoding string    Output encoding (default: base64)      
-  -l, --hashes string      Print available hashing algorithms     
-  --help string            Print this usage guide.  
-
 ### TODO
 
 - Maybe we'll turn this into a nice little npm package.
