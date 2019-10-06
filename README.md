@@ -1,4 +1,4 @@
-# password-juju
+# pwfu
 
 Just a little CLI random password generator.
 
