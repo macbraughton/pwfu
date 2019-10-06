@@ -4,7 +4,7 @@ Just a little CLI random password generator.
 
 ## Why?
 
-Because sometimes you need a random password and you don't want to think about it that much.
+Because sometimes you need to generate a password and you don't want to think about it that much.
 
 ## Implementation
 
