@@ -19,10 +19,10 @@ $ echo "SECRET=This can be whatever you want" > .env
 
 ```bash
 # Just give me a random password!
-$ password
+$ pwfu
 > p3eneRZgoesyhZgOLqsSX5VyM9lpWd
 # Add a seed to make it deterministic
-$ password bucky
+$ pwfu bucky
 > 8vRPrJZoowi2yuOZOsY69fc+q/MSgW
 ```
 
@@ -31,15 +31,15 @@ The cool part about generating passwords with a secret and a seed, is that they 
 ```bash
 # New facebook password
 echo "SECRET=My little secret" > .env
-password "Zuck no more"
+$ pwfu "Zuck no more"
 > LHFjqWwLHRmPEWAy/LgVNOU1gGMVTj
-password "Zuck no more"
+$ pwfu "Zuck no more"
 > LHFjqWwLHRmPEWAy/LgVNOU1gGMVTj
 ```
 
 Get fancy...
 ```bash
-$ password -l
+$ pwfu -l
 Available Hashing Algorithms:
         RSA-MD4
         RSA-MD5
@@ -50,9 +50,9 @@ Available Hashing Algorithms:
         ssl3-md5
         ssl3-sha1
         whirlpool
-password -a "sha256" "dude"
+$ pwfu -a "sha256" "dude"
 > O3bckFxvM9Jcl8tR2qWlJt2DXwqvk7
-password -a "RSA-MD5" -e "hex" "sharks!"
+$ pwfu -a "RSA-MD5" -e "hex" "sharks!"
 > 1f311ac92b1f11150ccae3b5bc0d04
 ```
 
