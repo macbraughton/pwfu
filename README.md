@@ -13,7 +13,7 @@ Just a minimal CLI wrapper over the `node` `crypto` library.
 ## Installation
 
 ```bash
-npm i - g pwfu
+npm i -g pwfu
 ```
 
 ## Definitions
