@@ -4,7 +4,7 @@ Just a little CLI random password generator.
 
 ## Why?
 
-Because sometimes you need a random password and you don't want to think about it that much.
+Because sometimes you need to generate a password and you don't want to think about it that much.
 
 ## Implementation
 
@@ -18,16 +18,17 @@ npm i - g pwfu
 
 ## Definitions
 
-There are two components to generating a password with pwfu:
+There are two concepts involved in generating a password with pwfu:
+- hash
 - secret
+- salt
 - seed
 
-The *secret* is used to **salt** the password.
-The *seed* is used to generate deterministic passwords.
-
-The *secret* is just something you store locally that helps the program to generate hashes that are unique. This is called salting.
-
-The *seed* is optional, but you can use if you want to create a *deterministic hash*.
+A *hash* is just the output of the function we use to produce our password.
+The *secret* is used to *salt* the password.
+The *seed* is used to generate a *hash*.
+The *secret* is just something you store locally that helps the program to generate hashes that are unique. This is called *salting*.
+The *seed* is optional, but you can use if you want to reproduce a *hash*. If you have the same *secret* and *seed* you'll get the same *hash*.
 
 ## Usage
 
@@ -75,6 +76,10 @@ O3bckFxvM9Jcl8tR2qWlJt2DXwqvk7
 > pwfu -a "RSA-MD5" -e "hex" "sharks!"
 1f311ac92b1f11150ccae3b5bc0d04
 ```
+
+## Disclaimer
+
+If you want to use this for anything other than locally generating unique passwords, I won't judge but that probably isn't a very good idea.
 
 ## License
 
