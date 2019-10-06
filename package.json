@@ -1,7 +1,7 @@
 {
   "name": "pwfu",
   "version": "0.0.1",
-  "main": "crypto.js",
+  "main": "lib/crypto.js",
   "author": "dw@1hx.ca",
   "license": "MIT",
   "dependencies": {
@@ -10,6 +10,14 @@
     "dotenv": "^8.1.0"
   },
   "bin": {
-    "pwfu": "./crypto.js"
+    "pwfu": "./lib/crypto.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2"
+  },
+  "scripts": {
+    "build:commonjs": "babel src --out-dir lib"
   }
 }

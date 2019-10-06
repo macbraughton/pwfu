@@ -1,8 +1,9 @@
 #!/usr/bin/env node
-require('dotenv').config()
-const commandLineArgs = require('command-line-args')
-const commandLineUsage = require('command-line-usage')
-const crypto = require("crypto")
+import dotenv from 'dotenv'
+dotenv.config()
+import commandLineArgs from 'command-line-args'
+import commandLineUsage from 'command-line-usage'
+import crypto from 'crypto'
 const secret = process.env.SECRET
 
 const optionDefinitions = [
