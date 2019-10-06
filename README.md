@@ -2,13 +2,19 @@
 
 Just a little CLI random password generator.
 
-# Why?
+## Why?
 
 Because sometimes you need a random password and you don't want to think about it that much.
 
-# Implementation
+## Implementation
 
 Just a minimal CLI wrapper over the `node` `crypto` library.
+
+## Installation
+
+```bash
+npm i - g pwfu
+```
 
 ## Usage
 
