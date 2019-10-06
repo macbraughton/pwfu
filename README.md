@@ -16,6 +16,19 @@ Just a minimal CLI wrapper over the `node` `crypto` library.
 npm i - g pwfu
 ```
 
+## Definitions
+
+There are two components to generating a password with pwfu:
+- secret
+- seed
+
+The *secret* is used to **salt** the password.
+The *seed* is used to generate deterministic passwords.
+
+The *secret* is just something you store locally that helps the program to generate hashes that are unique. This is called salting.
+
+The *seed* is optional, but helps if you want to a more complex password from a simple phrase. 
+
 ## Usage
 
 ```bash
@@ -29,19 +42,18 @@ Mmmm... what a salty string.
 # Just give me a random password!
 > pwfu
 p3eneRZgoesyhZgOLqsSX5VyM9lpWd
-# Add a seed to make it deterministic
-> pwfu bucky
-8vRPrJZoowi2yuOZOsY69fc+q/MSgW
-```
 
-The cool part about generating passwords with a secret and a seed, is that they are deterministic, meaning if you know the seed and the secret you can use a simple phrase to generate the password again if you forget it.
+## Deterministic passwords
+
+This can be useful if you want to create a complex password from a unique secret and seed.
 
 ```bash
 # New facebook password
-echo "SECRET=My little secret" > .env
-> pwfu "Zuck no more"
+> pwfu -s My little secret
+> pwfu Zuck no more
 LHFjqWwLHRmPEWAy/LgVNOU1gGMVTj
-> pwfu "Zuck no more"
+# Secrets make passwords generated from seeds deterministic
+> pwfu Zuck no more
 LHFjqWwLHRmPEWAy/LgVNOU1gGMVTj
 ```
 
