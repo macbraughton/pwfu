@@ -1,14 +1,15 @@
 {
-  "name": "password-juju",
+  "name": "pwfu",
   "version": "0.0.1",
   "main": "crypto.js",
   "author": "dw@1hx.ca",
   "license": "MIT",
   "dependencies": {
     "command-line-args": "^5.1.1",
+    "command-line-usage": "^6.0.2",
     "dotenv": "^8.1.0"
   },
   "bin": {
-    "password": "./crypto.js"
+    "pwfu": "./crypto.js"
   }
 }
