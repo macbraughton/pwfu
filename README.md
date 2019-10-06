@@ -18,7 +18,7 @@ npm i -g pwfu
 
 ## Definitions
 
-There are two concepts involved in generating a password with pwfu:
+There are a few concepts involved in generating a password with `pwfu`:
 - hash
 - secret
 - salt
