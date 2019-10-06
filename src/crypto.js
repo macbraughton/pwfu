@@ -65,7 +65,7 @@ else if (options.help) {
 }
 else {
   options.src = options.src 
-    ? options.src.join("") 
+    ? options.src.join(" ") 
     : String(Math.exp(Math.log2(Math.random() * Date.now())))
   
   let hash = crypto.createHmac(options.hasher || 'whirlpool', secret)
