@@ -1,13 +1,22 @@
 #!/usr/bin/env node
-import dotenv from 'dotenv'
-dotenv.config()
 import commandLineArgs from 'command-line-args'
 import commandLineUsage from 'command-line-usage'
 import crypto from 'crypto'
 import readline from 'readline'
 import fs from 'fs'
+import path from 'path'
+import os from 'os'
 
-const secret = process.env.SECRET
+let secret
+let homeDir = os.homedir()
+let configFile = '.pwfu'
+try {
+  if (fs.existsSync(path.join(homeDir, configFile))) {
+    secret = fs.readFileSync(path.join(homeDir, configFile))
+  }
+} catch {
+  pass
+}
 
 const optionDefinitions = [
   { name: 'algorithm', alias: 'a', type: String },
@@ -19,7 +28,8 @@ const optionDefinitions = [
 ]
 
 const options = commandLineArgs(optionDefinitions)
-if (!process.env.SECRET) {
+
+if (!secret) {
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -27,14 +37,14 @@ if (!process.env.SECRET) {
   
   rl.question("Tell me a secret so I can salt your passwords:\n", 
     secret => {
-      fs.writeFileSync('.env', `SECRET=${secret}`)
+      fs.writeFileSync(path.join(homeDir, configFile), `SECRET=${secret}`)
       console.log("Mmmm... That's a salty string.");
       rl.close()
   })
 }
 
 else if (options.secret) {
-  fs.writeFileSync('.env', `SECRET=${options.secret.join(" ")}`)
+  fs.writeFileSync(path.join(homeDir, configFile), `SECRET=${options.secret.join(" ")}`)
 }
 
 else if (options.hashes) {
