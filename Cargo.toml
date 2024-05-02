@@ -1,0 +1,8 @@
+[package]
+name = "pwfu"
+version = "0.2.0"
+edition = "2021"
+description = "A deterministic password generator"
+license = "MIT"
+repository = "https://crates.io/crates/pwfu"
+[dependencies]
